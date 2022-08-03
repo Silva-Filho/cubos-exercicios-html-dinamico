@@ -34,18 +34,18 @@ const obterDados = dados => {
         const buscarPais = event => {
             if (event.key !== "Enter") {
                 return;
-            } else if (!inputBusca.value.trim()) {
+            } else if (!inputBusca?.value.trim()) {
                 divPais.classList.remove("escondido");
-            } else if (inputBusca.value.trim() !== h2Nome.textContent) {
+            } else if (inputBusca?.value.trim().toLowerCase() !== h2Nome.textContent.toLowerCase()) {
                 divPais.classList.add("escondido");
-            } else if (inputBusca.value.trim() === h2Nome.textContent) {
+            } else if (inputBusca?.value.trim().toLowerCase() === h2Nome.textContent.toLowerCase()) {
                 divPais.classList.remove("escondido");
             }
         };
         
-        inputBusca.addEventListener("keydown", buscarPais);
+        inputBusca?.addEventListener("keydown", buscarPais);
 
-        paises.append(divPais);
+        paises?.append(divPais);
     });
 };
 
