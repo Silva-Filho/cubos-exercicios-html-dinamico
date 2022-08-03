@@ -36,9 +36,9 @@ const obterDados = dados => {
                 return;
             } else if (!inputBusca?.value.trim()) {
                 divPais.classList.remove("escondido");
-            } else if (inputBusca?.value.trim().toLowerCase() !== h2Nome.textContent.toLowerCase()) {
+            } else if (inputBusca?.value.trim().toLowerCase() !== h2Nome?.textContent?.toLowerCase()) {
                 divPais.classList.add("escondido");
-            } else if (inputBusca?.value.trim().toLowerCase() === h2Nome.textContent.toLowerCase()) {
+            } else if (inputBusca?.value.trim().toLowerCase() === h2Nome?.textContent?.toLowerCase()) {
                 divPais.classList.remove("escondido");
             }
         };
